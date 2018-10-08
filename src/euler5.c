@@ -14,14 +14,15 @@ int main(void){
 	while(flag == 1){
 		number += 20;
 		for(int div = 1; div <= 20; div ++){
-			if(number % div == 0){
-				printf("%d\n", div);
-				flag = 1;	
+			if(number % div != 0){
+				printf("%ld %d\n", number, div);
+				flag = 1;
+				break;	
 			}
-			else
+			else{
 				flag = -1;
-				printf("Breaking\n");
-				break;
+								
+			}
 		}
 		
 	}
